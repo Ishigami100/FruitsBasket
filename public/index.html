@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Webカメラから画像処理</title>
+<title>FruitsBasket</title>
 </head>
  <body onload="init()">
     <video  autoplay muted playsinline style="display: none;"></video>  
   <div id="wrapper">
     <canvas id="c1"></canvas>
+    <canvas id="c2"></canvas>
   </div>
       <script src="script.js"></script>
     
@@ -20,8 +21,11 @@
       margin: 0;
       padding: 0;
     }
+    #text{
+      display:none;
+    }
     canvas {
-      display:block;
+      position: absolute;
     }
     html, body, #wrapper{
         width: 100%;
@@ -32,10 +36,13 @@
 <script>
  
   function init() {
-    let wpr = document.getElementById("wrapper");
-    let cvs = document.getElementById("c1");
+    var wpr = document.getElementById("wrapper");
+ 　 var cvs = document.getElementById("c1");
+    var cvs2 = document.getElementById("c2");
     cvs.width = wpr.offsetWidth;
     cvs.height = wpr.offsetHeight;
+    cvs2.width = wpr.offsetWidth;
+    cvs2.height = wpr.offsetHeight;
   }
  
 </script>
